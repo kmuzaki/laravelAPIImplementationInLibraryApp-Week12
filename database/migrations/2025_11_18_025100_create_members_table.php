@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('members', function (Blueprint $table) {
             $table->id();
+            $table->string('student_id')->unique();
+            $table->string('name');
+            $table->string('email')->unique();
             $table->timestamps();
         });
     }
